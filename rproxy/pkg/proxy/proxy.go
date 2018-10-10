@@ -2,12 +2,13 @@ package proxy
 
 import (
 	"context"
+
 	"net/http"
 
 	"github.com/ggriffiths/gofun/rproxy/pkg/cache"
 	"github.com/go-redis/redis"
+	log "github.com/inconshreveable/log15"
 	"github.com/pkg/errors"
-	log "github.com/sirupsen/logrus"
 )
 
 const (

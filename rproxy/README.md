@@ -3,6 +3,7 @@ Time Spent
 - 45 mins on project skeleton - web server, look into redis client & protocol
 - 15 mins on seq concurrent processing
 - 30 mins on parallel processing (1-1:30am)
+- 15 min on extra correlation id (1:30-1:45am)
 
 Requirements 
 - [x] HTTP web service

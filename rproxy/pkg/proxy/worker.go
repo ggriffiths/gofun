@@ -3,7 +3,9 @@ package proxy
 import (
 	"net/http"
 
-	log "github.com/sirupsen/logrus"
+	"github.com/nu7hatch/gouuid"
+
+	log "github.com/inconshreveable/log15"
 )
 
 const (
@@ -12,22 +14,40 @@ const (
 
 // request represents some action that has hit our proxy
 type request struct {
-	httpWriter  http.ResponseWriter
-	httpRequest *http.Request
+	correlationID string
+	httpWriter    http.ResponseWriter
+	httpRequest   *http.Request
 }
 
 // NewRequest creates a new proxy request
 func newRequest(w http.ResponseWriter, r *http.Request) *request {
+	var correlationID string
+
+	id, err := uuid.NewV4()
+	if err != nil {
+		// Should almost never fail, but if it does,
+		// continuing operating though logging as an error
+		log.Error("Failed to generate UUID", "err", err)
+		correlationID = ""
+		return &request{
+			correlationID: "failed",
+			httpWriter:    w,
+			httpRequest:   r,
+		}
+	}
+	correlationID = id.String()
+
 	return &request{
-		httpWriter:  w,
-		httpRequest: r,
+		correlationID: correlationID,
+		httpWriter:    w,
+		httpRequest:   r,
 	}
 }
 
 // newWorker creates a new worker to listen on all proxy
 // server requests coming into the system.
 func (p *Proxy) newWorkerPool(count int) {
-	for id := 0; id < count; id++ {
+	for i := 0; i < count; i++ {
 		go func() {
 			for {
 				select {

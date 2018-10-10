@@ -3,8 +3,8 @@ package proxy
 import (
 	"net/http"
 
+	log "github.com/inconshreveable/log15"
 	"github.com/pkg/errors"
-	log "github.com/sirupsen/logrus"
 )
 
 // handleGet handles a single http.Get request to the proxy
