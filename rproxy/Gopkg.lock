@@ -2,12 +2,6 @@
 
 
 [[projects]]
-  name = "github.com/fsnotify/fsnotify"
-  packages = ["."]
-  revision = "c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9"
-  version = "v1.4.7"
-
-[[projects]]
   name = "github.com/go-redis/redis"
   packages = [
     ".",
@@ -29,21 +23,13 @@
   version = "v1.8.0"
 
 [[projects]]
-  name = "github.com/hashicorp/hcl"
+  name = "github.com/hashicorp/golang-lru"
   packages = [
     ".",
-    "hcl/ast",
-    "hcl/parser",
-    "hcl/printer",
-    "hcl/scanner",
-    "hcl/strconv",
-    "hcl/token",
-    "json/parser",
-    "json/scanner",
-    "json/token"
+    "simplelru"
   ]
-  revision = "8cb6e5b959231cc1119e43259c4a608f9c51a241"
-  version = "v1.0.0"
+  revision = "20f1fb78b0740ba8c3cb143a61e86ba5c8669768"
+  version = "v0.5.0"
 
 [[projects]]
   name = "github.com/inconshreveable/log15"
@@ -52,16 +38,10 @@
   version = "v2.14"
 
 [[projects]]
-  name = "github.com/konsorten/go-windows-terminal-sequences"
+  name = "github.com/kelseyhightower/envconfig"
   packages = ["."]
-  revision = "5c8c8bd35d3832f5d134ae1e1e375b69a4d25242"
-  version = "v1.0.1"
-
-[[projects]]
-  name = "github.com/magiconair/properties"
-  packages = ["."]
-  revision = "c2353362d570a7bfa228149c62842019201cfb71"
-  version = "v1.8.0"
+  revision = "f611eb38b3875cc3bd991ca91c51d06446afa14c"
+  version = "v1.3.0"
 
 [[projects]]
   name = "github.com/mattn/go-colorable"
@@ -76,105 +56,20 @@
   version = "v0.0.4"
 
 [[projects]]
-  name = "github.com/mitchellh/mapstructure"
-  packages = ["."]
-  revision = "3536a929edddb9a5b34bd6861dc4a9647cb459fe"
-  version = "v1.1.2"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/nu7hatch/gouuid"
-  packages = ["."]
-  revision = "179d4d0c4d8d407a32af483c2354df1d2c91e6c3"
-
-[[projects]]
-  name = "github.com/pelletier/go-toml"
-  packages = ["."]
-  revision = "c01d1270ff3e442a8a57cddc1c92dc1138598194"
-  version = "v1.2.0"
-
-[[projects]]
   name = "github.com/pkg/errors"
   packages = ["."]
   revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
   version = "v0.8.0"
 
 [[projects]]
-  name = "github.com/sirupsen/logrus"
-  packages = ["."]
-  revision = "ad15b42461921f1fb3529b058c6786c6a45d5162"
-  version = "v1.1.1"
-
-[[projects]]
-  name = "github.com/spf13/afero"
-  packages = [
-    ".",
-    "mem"
-  ]
-  revision = "d40851caa0d747393da1ffb28f7f9d8b4eeffebd"
-  version = "v1.1.2"
-
-[[projects]]
-  name = "github.com/spf13/cast"
-  packages = ["."]
-  revision = "8965335b8c7107321228e3e3702cab9832751bac"
-  version = "v1.2.0"
-
-[[projects]]
-  name = "github.com/spf13/jwalterweatherman"
-  packages = ["."]
-  revision = "4a4406e478ca629068e7768fc33f3f044173c0a6"
-  version = "v1.0.0"
-
-[[projects]]
-  name = "github.com/spf13/pflag"
-  packages = ["."]
-  revision = "298182f68c66c05229eb03ac171abe6e309ee79a"
-  version = "v1.0.3"
-
-[[projects]]
-  name = "github.com/spf13/viper"
-  packages = ["."]
-  revision = "2c12c60302a5a0e62ee102ca9bc996277c2f64f5"
-  version = "v1.2.1"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/crypto"
-  packages = ["ssh/terminal"]
-  revision = "7c1a557ab941a71c619514f229f0b27ccb0c27cf"
-
-[[projects]]
   branch = "master"
   name = "golang.org/x/sys"
-  packages = [
-    "unix",
-    "windows"
-  ]
-  revision = "4497e2df6f9e69048a54498c7affbbec3294ad47"
-
-[[projects]]
-  name = "golang.org/x/text"
-  packages = [
-    "internal/gen",
-    "internal/triegen",
-    "internal/ucd",
-    "transform",
-    "unicode/cldr",
-    "unicode/norm"
-  ]
-  revision = "f21a4dfb5e38f5895301dc265a8def02365cc3d0"
-  version = "v0.3.0"
-
-[[projects]]
-  name = "gopkg.in/yaml.v2"
-  packages = ["."]
-  revision = "5420a8b6744d3b0345ab293f6fcba19c978f1183"
-  version = "v2.2.1"
+  packages = ["unix"]
+  revision = "fa43e7bc11baaae89f3f902b2b4d832b68234844"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "2dce40c93099088c57c9f2cb7538efe61596da937b4b1c6564f88792127ade44"
+  inputs-digest = "95b3adef73d378ad49421aa59b8adeea9d8b2e245e77fc55af91a6ec173c3a89"
   solver-name = "gps-cdcl"
   solver-version = 1
